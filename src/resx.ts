@@ -121,8 +121,8 @@ export function unpackSwf(swfPath: string): Promise<string> {
     const args = [
       '-jar',
       `"${path.join(LIB_DIR, 'jpexs', 'ffdec.jar')}"`,
-      '-selectclass kabam.rotmg.messaging.impl.GameServerConnection',
-      '-export script',
+      '-selectclass kabam.rotmg.assets',
+      '-export folder',
       `"${path.join(pathInfo.dir, 'decompiled')}"`,
       `"${path.join(pathInfo.dir, pathInfo.base)}"`
     ];
